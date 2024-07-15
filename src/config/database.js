@@ -1,0 +1,17 @@
+import Sequelize from 'sequelize'
+
+const hostname = 'dpchavez-20241prograweb-db.postgres.database.azure.com'
+const username = 'postgres'
+const password = 'Ulima20241'
+const database = 'proyecto20241'
+const dbPort = 5432
+const dialect = 'postgres'
+
+const sequelize = new Sequelize(database, username, password, {
+    host: hostname,
+    port: dbPort,
+    dialect: dialect,
+    operatorAliases: false
+})
+
+export default sequelize;
